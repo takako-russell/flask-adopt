@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<div class="wrapper">
+  <form method="POST" action="/pets/{{pet_id}}/edit">
+    {{ form.csrf_token }}
+    <h3>Edit: {{ form.pet_name.label}}</h3>
+    <p>{{form.photourl.label }} {{ form.photourl() }}</p>
+    <p>{{form.notes.label }} {{ form.notes() }}</p>
+    <p>{{form.available.label }} {{ form.available() }}</p>
+
+    <p>
+      <input type="submit" value="Add" />
+    </p>
+  </form>
+</div>
+
+{% endblock %}

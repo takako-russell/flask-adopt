@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('addPet') }}">Add pet</a>
+  </nav>
+  <div class="content">{% block content %}{% endblock %}</div>
+</body>

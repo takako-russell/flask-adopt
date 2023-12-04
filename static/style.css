@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  background-color: lightgray;
+  padding: 50px;
+}
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 50px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.pet-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pet-item {
+  width: calc(33.33% - 10px); /* Adjust the width and margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.pet-item img {
+  width: 100%;
+  height: auto;
+}
+
+.pet_availability {
+  margin-top: 10px; /* Adjust the margin as needed */
+  text-align: center; /* Center the text below the image */
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<div class="detail-wrapper">
+  <div><p>Name: {{ pet.name }}</p></div>
+  <div><p>Spieces: {{ pet.species }}</p></div>
+  <div><p>age: {{ pet.age }}</p></div>
+  <div>
+    <p>notes: {{ pet.notes }}</p>
+    {% if pet.available == True %}
+    <p>Availavility: Yes</p>
+    {% else %}
+    <p>Availavility: No</p>
+    {% endif %}
+  </div>
+
+  <form>
+    <button formaction="/pets/{{ pet.id }}/edit">Edit</button>
+  </form>
+</div>
+
+{% endblock %}
