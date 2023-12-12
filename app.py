@@ -62,11 +62,8 @@ def edit(pet_id):
     if request.method=='GET':
         
         pet = Pet.query.get(pet_id)
-        form = EditForm()
-        form.available.data = pet.available
-        form.pet_name.label = pet.name
-        form.photourl.data = pet.photo_url
-        form.notes.data = pet.notes
+        form = EditForm(obj=pet)
+       
         return render_template('editform.html',form=form,pet_id=pet_id)
     
     
